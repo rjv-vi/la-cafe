@@ -1,0 +1,90 @@
+import { useState } from 'react'
+
+// Hero как в Drinko: огромное двухсложное слово, продукт по центру прорывает строку.
+// На мобильном — слово сверху, фото, слово снизу.
+export default function Hero() {
+  const [ok, setOk] = useState(true)
+  const [loaded, setLoaded] = useState(false)
+
+  return (
+    <section
+      id="top"
+      className="relative overflow-hidden bg-sand-100"
+    >
+      {/* мягкий световой блик в углу */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-32 -top-20 h-[420px] w-[420px] rounded-full bg-sand-50 blur-3xl opacity-70"
+      />
+
+      <div className="container-x relative pt-[60px] sm:pt-[68px]">
+        <div className="grid grid-cols-1 items-center gap-2 pb-12 pt-12 sm:gap-4 sm:pb-20 sm:pt-16 lg:grid-cols-3 lg:gap-0 lg:pb-24 lg:pt-24">
+          {/* Левое слово */}
+          <h1 className="display order-1 col-span-1 text-center text-[20vw] font-extrabold leading-[0.85] sm:text-[18vw] lg:order-1 lg:text-left lg:text-[clamp(80px,10vw,180px)]">
+            LA
+            <span className="ml-3 hidden align-middle font-script text-3xl font-normal text-coffee-500 sm:inline lg:hidden">
+              welcome
+            </span>
+          </h1>
+
+          {/* Продукт по центру */}
+          <div className="order-2 col-span-1 mx-auto -my-4 flex aspect-square w-[80%] max-w-[460px] items-center justify-center sm:-my-8 lg:order-2 lg:my-0 lg:w-full">
+            <div className="relative h-full w-full">
+              {/* плейсхолдер */}
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 flex items-center justify-center text-[35vw] sm:text-[28vw] lg:text-[14vw]"
+              >
+                ☕
+              </div>
+              {/* реальное фото */}
+              {ok && (
+                <img
+                  src="/images/hero.jpg"
+                  alt="Кофе La Cafe"
+                  onLoad={() => setLoaded(true)}
+                  onError={() => setOk(false)}
+                  className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-700 ${
+                    loaded ? 'opacity-100' : 'opacity-0'
+                  }`}
+                />
+              )}
+            </div>
+          </div>
+
+          {/* Правое слово */}
+          <h1 className="display order-3 col-span-1 text-center text-[20vw] font-extrabold leading-[0.85] sm:text-[18vw] lg:order-3 lg:text-right lg:text-[clamp(80px,10vw,180px)]">
+            CAFE
+          </h1>
+        </div>
+
+        {/* Подвал hero — короткое описание, без перегруза */}
+        <div className="flex flex-col items-center gap-6 pb-16 sm:flex-row sm:justify-between sm:pb-24">
+          <p className="max-w-md text-center text-base text-ink-700 sm:text-left">
+            Кофейня №1 по завтракам в Бишкеке. Открыто каждый день с 08:00 до 02:00.
+          </p>
+
+          <a
+            href="#menu"
+            className="group inline-flex items-center gap-3 rounded-full bg-ink-900 px-6 py-4 text-sm font-medium text-sand-50 transition hover:bg-ink-800 active:scale-[0.98] tap"
+          >
+            Посмотреть меню
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              className="transition-transform duration-300 group-hover:translate-x-1"
+            >
+              <path d="M5 12h14" />
+              <path d="M13 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  )
+}
