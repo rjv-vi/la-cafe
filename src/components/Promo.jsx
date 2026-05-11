@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import Reveal from './Reveal.jsx'
 
+const ASSET_BASE = import.meta.env.BASE_URL
+
 // Розовый блок с новинкой — прямой аналог "New drink" из reference.
 export default function Promo() {
   const [ok, setOk] = useState(true)
@@ -84,7 +86,7 @@ export default function Promo() {
               </div>
               {ok && (
                 <img
-                  src={`/images/promo.${format}`}
+                  src={`${ASSET_BASE}images/promo.${format}`}
                   alt="Тирамису от La Crème"
                   onLoad={() => setLoaded(true)}
                   onError={() => {

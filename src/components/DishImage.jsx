@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+const ASSET_BASE = import.meta.env.BASE_URL
+
 // Простое фото блюда. На белом фоне, без декораций — как в reference.
 // При отсутствии файла показывает большой эмодзи и название.
 export default function DishImage({ slug, name, emoji = '🍽️', className = '' }) {
@@ -17,7 +19,7 @@ export default function DishImage({ slug, name, emoji = '🍽️', className = '
       </div>
       {ok && (
         <img
-          src={`/images/menu/${slug}.${format}`}
+          src={`${ASSET_BASE}images/menu/${slug}.${format}`}
           alt={name}
           loading="lazy"
           decoding="async"

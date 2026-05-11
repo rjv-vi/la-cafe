@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+const ASSET_BASE = import.meta.env.BASE_URL
+
 // Hero как в Drinko: LA / продукт / CAFE всегда в одну горизонтальную строку.
 export default function Hero() {
   const [ok, setOk] = useState(true)
@@ -37,7 +39,7 @@ export default function Hero() {
               {/* реальное фото */}
               {ok && (
                 <img
-                  src={`/images/hero.${format}`}
+                  src={`${ASSET_BASE}images/hero.${format}`}
                   alt="Кофе La Cafe"
                   onLoad={() => setLoaded(true)}
                   onError={() => {
