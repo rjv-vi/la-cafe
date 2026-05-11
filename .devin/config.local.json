@@ -9,7 +9,10 @@
       "Exec(ls)",
       "Exec(mkdir)",
       "Exec(cp)",
-      "Exec(git add)"
+      "Exec(git add)",
+      "Exec(git commit)",
+      "Exec(git)",
+      "Exec(cat)"
     ]
   }
 }

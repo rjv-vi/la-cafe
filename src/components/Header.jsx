@@ -26,14 +26,14 @@ export default function Header() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-40 transition-colors duration-300 ${
-        scrolled || open ? 'bg-sand-100/85 backdrop-blur-md' : ''
+        open ? 'bg-ink-900' : scrolled ? 'bg-sand-100/85 backdrop-blur-md' : ''
       }`}
     >
       <div className="container-x flex h-[60px] items-center justify-between sm:h-[68px]">
         {/* Лого */}
         <a href="#top" className="flex items-center gap-2 tap" onClick={() => setOpen(false)}>
           <Logo size={36} />
-          <span className="font-display text-xl font-semibold tracking-tight text-ink-900">
+          <span className={`font-display text-xl font-semibold tracking-tight transition-colors ${open ? 'text-sand-50' : 'text-ink-900'}`}>
             La&nbsp;Cafe
           </span>
         </a>
@@ -69,7 +69,7 @@ export default function Header() {
           <a
             href="tel:+996555811122"
             aria-label="Позвонить"
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full text-ink-700 transition hover:bg-sand-200 hover:text-ink-900 tap"
+            className={`inline-flex h-9 w-9 items-center justify-center rounded-full transition tap ${open ? 'text-sand-50 hover:bg-sand-50/10' : 'text-ink-700 hover:bg-sand-200 hover:text-ink-900'}`}
           >
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
@@ -90,7 +90,7 @@ export default function Header() {
             aria-label={open ? 'Закрыть меню' : 'Открыть меню'}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full text-ink-700 hover:bg-sand-200 hover:text-ink-900 md:hidden tap"
+            className={`inline-flex h-9 w-9 items-center justify-center rounded-full md:hidden tap ${open ? 'text-sand-50 hover:bg-sand-50/10' : 'text-ink-700 hover:bg-sand-200 hover:text-ink-900'}`}
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
               {open ? (<><path d="M6 6l12 12" /><path d="M18 6L6 18" /></>) : (<><path d="M4 7h16" /><path d="M4 13h10" /></>)}
@@ -104,7 +104,7 @@ export default function Header() {
         className={`md:hidden ${open ? 'pointer-events-auto' : 'pointer-events-none'}`}
       >
         <div
-          className={`fixed inset-0 z-30 bg-sand-100/96 backdrop-blur-md transition-opacity duration-300 ${
+          className={`fixed inset-0 z-30 bg-ink-900 transition-opacity duration-300 ${
             open ? 'opacity-100' : 'opacity-0'
           }`}
         >
@@ -115,7 +115,7 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="border-b border-ink-900/10 py-6 font-display text-3xl font-semibold tracking-tight text-ink-900"
+                  className="border-b border-sand-50/10 py-6 font-display text-3xl font-semibold tracking-tight text-sand-50"
                 >
                   {item.label}
                 </a>
@@ -123,7 +123,7 @@ export default function Header() {
             </nav>
             <a
               href="tel:+996555811122"
-              className="mt-6 flex items-center justify-between rounded-2xl bg-ink-900 px-5 py-4 text-sand-50"
+              className="mt-6 flex items-center justify-between rounded-2xl bg-coffee-500 px-5 py-4 text-sand-50"
             >
               <span className="text-[11px] uppercase tracking-[0.18em] opacity-70">Позвонить</span>
               <span className="font-display text-xl">0555 81 11 22</span>
