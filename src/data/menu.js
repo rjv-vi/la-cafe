@@ -24,57 +24,15 @@ export const dishes = {
       tag: 'хит',
     },
     {
-      name: 'Сырники с ягодным соусом',
-      description: 'Воздушные сырники из домашнего творога, сметана и тёплый ягодный соус.',
-      price: 320,
-      imgKey: 'syrniki',
-      emoji: '🥞',
-    },
-    {
       name: 'Авокадо-тост',
       description: 'Тост из ремесленного хлеба, мятый авокадо, яйцо-пашот, кунжут, цедра лимона.',
       price: 360,
       imgKey: 'avocado-toast',
       emoji: '🥑',
     },
-    {
-      name: 'Бенедикт с лососем',
-      description: 'Маффин-инглиш, слабосолёный лосось, яйцо-пашот и шелковистый соус голландез.',
-      price: 480,
-      imgKey: 'benedict',
-      emoji: '🍳',
-    },
-    {
-      name: 'Гранола с йогуртом',
-      description: 'Домашняя гранола с орехами и мёдом, греческий йогурт и сезонные фрукты.',
-      price: 280,
-      imgKey: 'granola',
-      emoji: '🥣',
-    },
-    {
-      name: 'Овсянка с бананом и пастой',
-      description: 'Овсянка на молоке, банан, арахисовая паста, какао-крупка.',
-      price: 250,
-      imgKey: 'oatmeal',
-      emoji: '🌾',
-    },
   ],
 
   coffee: [
-    {
-      name: 'Эспрессо',
-      description: 'Двойной шот плотного эспрессо. Сорт сезонной обжарки.',
-      price: 90,
-      imgKey: 'espresso',
-      emoji: '☕',
-    },
-    {
-      name: 'Американо',
-      description: 'Эспрессо, разбавленный горячей водой. Чистый и согревающий.',
-      price: 110,
-      imgKey: 'americano',
-      emoji: '☕',
-    },
     {
       name: 'Капучино',
       description: 'Эспрессо, бархатное молоко и шапка плотной пены. Классика La Cafe.',
@@ -82,27 +40,6 @@ export const dishes = {
       imgKey: 'cappuccino',
       emoji: '☕',
       tag: 'классика',
-    },
-    {
-      name: 'Латте',
-      description: 'Эспрессо и нежно вспененное молоко в стеклянном бокале.',
-      price: 170,
-      imgKey: 'latte',
-      emoji: '🥛',
-    },
-    {
-      name: 'Флэт-уайт',
-      description: 'Двойной ристретто и тонкий слой плотной молочной пены.',
-      price: 170,
-      imgKey: 'flat-white',
-      emoji: '☕',
-    },
-    {
-      name: 'Раф ваниль',
-      description: 'Сливочный раф на основе эспрессо со сливками и ванилью.',
-      price: 190,
-      imgKey: 'raf-vanilla',
-      emoji: '🍶',
     },
     {
       name: 'Лавандовый раф',
@@ -115,13 +52,6 @@ export const dishes = {
   ],
 
   drinks: [
-    {
-      name: 'Чайник зелёного чая',
-      description: 'Сенча, жасмин или мята — на выбор. На двоих, в керамическом чайнике.',
-      price: 200,
-      imgKey: 'tea-pot',
-      emoji: '🍵',
-    },
     {
       name: 'Облепиховый чай',
       description: 'Согревающий чай со свежей облепихой, имбирём, мёдом и апельсином.',
@@ -136,20 +66,6 @@ export const dishes = {
       price: 220,
       imgKey: 'mint-lemonade',
       emoji: '🌿',
-    },
-    {
-      name: 'Ягодный лимонад',
-      description: 'Малина, клубника, базилик и тоник. Подаём в стеклянной банке.',
-      price: 240,
-      imgKey: 'berry-lemonade',
-      emoji: '🍓',
-    },
-    {
-      name: 'Какао на тёмном шоколаде',
-      description: 'Густое какао на молоке с настоящим тёмным шоколадом и щепоткой соли.',
-      price: 220,
-      imgKey: 'hot-chocolate',
-      emoji: '🍫',
     },
   ],
 
@@ -169,20 +85,6 @@ export const dishes = {
       imgKey: 'caesar-chicken',
       emoji: '🥗',
     },
-    {
-      name: 'Цезарь с креветками',
-      description: 'Тигровые креветки на гриле, романо, пармезан, лимон и фирменный соус.',
-      price: 480,
-      imgKey: 'caesar-shrimp',
-      emoji: '🦐',
-    },
-    {
-      name: 'Боул с авокадо и киноа',
-      description: 'Киноа, авокадо, нут, эдамаме, морковь и тахини-дрессинг.',
-      price: 420,
-      imgKey: 'quinoa-bowl',
-      emoji: '🥑',
-    },
   ],
 
   soups: [
@@ -201,20 +103,6 @@ export const dishes = {
       imgKey: 'tom-yam',
       emoji: '🌶️',
     },
-    {
-      name: 'Куриный суп с лапшой',
-      description: 'Прозрачный бульон, домашняя лапша, кусочки курицы, яйцо, укроп.',
-      price: 320,
-      imgKey: 'chicken-soup',
-      emoji: '🍲',
-    },
-    {
-      name: 'Тыквенный крем-суп',
-      description: 'Бархатный суп из запечённой тыквы со сливками, тыквенными семечками и трюфельным маслом.',
-      price: 290,
-      imgKey: 'pumpkin-soup',
-      emoji: '🎃',
-    },
   ],
 
   sandwiches: [
@@ -227,32 +115,11 @@ export const dishes = {
       tag: 'новинка',
     },
     {
-      name: 'Брускетта с лососем',
-      description: 'Слабосолёный лосось, сливочный сыр, каперсы, цедра лимона и микрозелень.',
-      price: 460,
-      imgKey: 'bruschetta-salmon',
-      emoji: '🐟',
-    },
-    {
-      name: 'Брускетта томат-базилик',
-      description: 'Конкассе из томатов, чеснок, оливковое масло, бальзамик и свежий базилик.',
-      price: 290,
-      imgKey: 'bruschetta-tomato',
-      emoji: '🍅',
-    },
-    {
       name: 'Клаб-сэндвич',
       description: 'Курица, бекон, томат, салат, яйцо и фирменный соус. Подаём с картофелем фри.',
       price: 420,
       imgKey: 'club-sandwich',
       emoji: '🥪',
-    },
-    {
-      name: 'Сэндвич с курицей и айоли',
-      description: 'Чиабатта, гриль-курица, чесночный айоли, томаты и микс салатов.',
-      price: 380,
-      imgKey: 'chicken-sandwich',
-      emoji: '🥖',
     },
   ],
 
@@ -265,26 +132,12 @@ export const dishes = {
       emoji: '🍔',
     },
     {
-      name: 'С печёным перцем',
-      description: 'Говяжья котлета, печёный сладкий перец, моцарелла, руккола, песто.',
-      price: 420,
-      imgKey: 'burger-pepper',
-      emoji: '🌶️',
-    },
-    {
       name: 'BBQ-бургер',
       description: 'Двойная котлета, копчёный бекон, чеддер, луковые кольца, соус BBQ.',
       price: 440,
       imgKey: 'burger-bbq',
       emoji: '🔥',
       tag: 'для голодных',
-    },
-    {
-      name: 'KFC-бургер',
-      description: 'Хрустящее куриное филе в панировке, салат айсберг, томат и пикантный соус.',
-      price: 420,
-      imgKey: 'burger-kfc',
-      emoji: '🍗',
     },
   ],
 
@@ -298,40 +151,12 @@ export const dishes = {
       tag: 'la crème',
     },
     {
-      name: 'Чизкейк Нью-Йорк',
-      description: 'Шелковистый чизкейк на песочной основе, ягодный соус и мята.',
-      price: 260,
-      imgKey: 'cheesecake',
-      emoji: '🍰',
-    },
-    {
-      name: 'Медовик',
-      description: 'Тонкие медовые коржи и нежный сметанный крем — фирменный рецепт La Crème.',
-      price: 240,
-      imgKey: 'honeycake',
-      emoji: '🍯',
-    },
-    {
-      name: 'Павлова с ягодами',
-      description: 'Хрустящая меренга, маскарпоне-крем и сезонные ягоды.',
-      price: 300,
-      imgKey: 'pavlova',
-      emoji: '🍓',
-    },
-    {
       name: 'Шоколадный фондан',
       description: 'Тёплый шоколадный кекс с жидким центром и шариком ванильного мороженого.',
       price: 320,
       imgKey: 'fondant',
       emoji: '🍫',
       tag: 'тёплый',
-    },
-    {
-      name: 'Малиновый макарун',
-      description: 'Хрустящая миндальная меренга и нежный малиновый ганаш. Поштучно.',
-      price: 120,
-      imgKey: 'macaron',
-      emoji: '🌸',
     },
   ],
 }
