@@ -1,7 +1,15 @@
 {
   "permissions": {
     "allow": [
-      "Exec(npm)"
+      "Exec(npm)",
+      "Exec(pnpm build)",
+      "Exec(pnpm dev)",
+      "Exec(node)",
+      "Exec(npx)",
+      "Exec(ls)",
+      "Exec(mkdir)",
+      "Exec(cp)",
+      "Exec(git add)"
     ]
   }
 }

@@ -1,7 +1,6 @@
 import { useState } from 'react'
 
-// Hero как в Drinko: огромное двухсложное слово, продукт по центру прорывает строку.
-// На мобильном — слово сверху, фото, слово снизу.
+// Hero как в Drinko: LA / продукт / CAFE всегда в одну горизонтальную строку.
 export default function Hero() {
   const [ok, setOk] = useState(true)
   const [loaded, setLoaded] = useState(false)
@@ -18,22 +17,19 @@ export default function Hero() {
       />
 
       <div className="container-x relative pt-[60px] sm:pt-[68px]">
-        <div className="grid grid-cols-1 items-center gap-2 pb-12 pt-12 sm:gap-4 sm:pb-20 sm:pt-16 lg:grid-cols-3 lg:gap-0 lg:pb-24 lg:pt-24">
+        <div className="flex items-center justify-between gap-1 pb-12 pt-12 sm:gap-3 sm:pb-20 sm:pt-16 lg:pb-24 lg:pt-24">
           {/* Левое слово */}
-          <h1 className="display order-1 col-span-1 text-center text-[20vw] font-extrabold leading-[0.85] sm:text-[18vw] lg:order-1 lg:text-left lg:text-[clamp(80px,10vw,180px)]">
+          <h1 className="display shrink-0 text-[13vw] font-extrabold leading-[0.85] sm:text-[14vw] lg:text-[clamp(80px,10vw,180px)]">
             LA
-            <span className="ml-3 hidden align-middle font-script text-3xl font-normal text-coffee-500 sm:inline lg:hidden">
-              welcome
-            </span>
           </h1>
 
           {/* Продукт по центру */}
-          <div className="order-2 col-span-1 mx-auto -my-4 flex aspect-square w-[80%] max-w-[460px] items-center justify-center sm:-my-8 lg:order-2 lg:my-0 lg:w-full">
+          <div className="flex aspect-square w-[30vw] shrink-0 items-center justify-center sm:w-[28vw] lg:w-[22vw] lg:max-w-[360px]">
             <div className="relative h-full w-full">
               {/* плейсхолдер */}
               <div
                 aria-hidden="true"
-                className="absolute inset-0 flex items-center justify-center text-[35vw] sm:text-[28vw] lg:text-[14vw]"
+                className="absolute inset-0 flex items-center justify-center text-[26vw] sm:text-[24vw] lg:text-[14vw]"
               >
                 ☕
               </div>
@@ -53,7 +49,7 @@ export default function Hero() {
           </div>
 
           {/* Правое слово */}
-          <h1 className="display order-3 col-span-1 text-center text-[20vw] font-extrabold leading-[0.85] sm:text-[18vw] lg:order-3 lg:text-right lg:text-[clamp(80px,10vw,180px)]">
+          <h1 className="display shrink-0 text-[13vw] font-extrabold leading-[0.85] sm:text-[14vw] lg:text-[clamp(80px,10vw,180px)]">
             CAFE
           </h1>
         </div>
