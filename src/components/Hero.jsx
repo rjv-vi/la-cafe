@@ -29,13 +29,14 @@ export default function Hero() {
           {/* Продукт по центру */}
           <div className="flex aspect-square w-[30vw] shrink-0 items-center justify-center sm:w-[28vw] lg:w-[22vw] lg:max-w-[360px]">
             <div className="relative h-full w-full">
-              {/* плейсхолдер */}
-              <div
-                aria-hidden="true"
-                className="absolute inset-0 flex items-center justify-center text-[26vw] sm:text-[24vw] lg:text-[14vw]"
-              >
-                ☕
-              </div>
+              {!ok && (
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 flex items-center justify-center text-[26vw] sm:text-[24vw] lg:text-[14vw]"
+                >
+                  ☕
+                </div>
+              )}
               {/* реальное фото */}
               {ok && (
                 <img

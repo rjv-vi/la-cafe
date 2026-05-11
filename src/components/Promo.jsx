@@ -78,12 +78,14 @@ export default function Promo() {
 
             {/* Фото справа */}
             <div className="relative mx-auto aspect-square w-full max-w-[460px]">
-              <div
-                aria-hidden="true"
-                className="absolute inset-0 flex items-center justify-center text-[40vw] sm:text-[28vw] lg:text-[14vw]"
-              >
-                🍰
-              </div>
+              {!ok && (
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 flex items-center justify-center text-[40vw] sm:text-[28vw] lg:text-[14vw]"
+                >
+                  🍰
+                </div>
+              )}
               {ok && (
                 <img
                   src={`${ASSET_BASE}images/promo.${format}`}

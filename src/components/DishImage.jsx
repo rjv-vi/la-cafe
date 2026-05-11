@@ -11,12 +11,14 @@ export default function DishImage({ slug, name, emoji = '🍽️', className = '
 
   return (
     <div className={`relative overflow-hidden bg-white ${className}`}>
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center"
-      >
-        <span className="text-6xl opacity-30 sm:text-7xl">{emoji}</span>
-      </div>
+      {!ok && (
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center"
+        >
+          <span className="text-6xl opacity-30 sm:text-7xl">{emoji}</span>
+        </div>
+      )}
       {ok && (
         <img
           src={`${ASSET_BASE}images/menu/${slug}.${format}`}
