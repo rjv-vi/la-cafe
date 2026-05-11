@@ -5,6 +5,7 @@ import { useState } from 'react'
 export default function DishImage({ slug, name, emoji = '🍽️', className = '' }) {
   const [ok, setOk] = useState(true)
   const [loaded, setLoaded] = useState(false)
+  const [format, setFormat] = useState('png')
 
   return (
     <div className={`relative overflow-hidden bg-white ${className}`}>
@@ -16,12 +17,18 @@ export default function DishImage({ slug, name, emoji = '🍽️', className = '
       </div>
       {ok && (
         <img
-          src={`/images/menu/${slug}.jpg`}
+          src={`/images/menu/${slug}.${format}`}
           alt={name}
           loading="lazy"
           decoding="async"
           onLoad={() => setLoaded(true)}
-          onError={() => setOk(false)}
+          onError={() => {
+            if (format === 'png') {
+              setFormat('jpg')
+            } else {
+              setOk(false)
+            }
+          }}
           className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${
             loaded ? 'opacity-100' : 'opacity-0'
           }`}

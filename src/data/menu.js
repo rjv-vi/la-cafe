@@ -1,5 +1,5 @@
 // Меню La Cafe. Цены в кыргызских сомах (с).
-// Поле imgKey соответствует имени файла в /public/images/menu/{imgKey}.jpg
+// Поле imgKey соответствует имени файла в /public/images/menu/{imgKey}.png
 // Если файла нет — будет показан стилизованный плейсхолдер.
 
 export const categories = [

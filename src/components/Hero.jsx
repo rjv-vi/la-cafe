@@ -4,6 +4,7 @@ import { useState } from 'react'
 export default function Hero() {
   const [ok, setOk] = useState(true)
   const [loaded, setLoaded] = useState(false)
+  const [format, setFormat] = useState('png')
 
   return (
     <section
@@ -36,10 +37,16 @@ export default function Hero() {
               {/* реальное фото */}
               {ok && (
                 <img
-                  src="/images/hero.jpg"
+                  src={`/images/hero.${format}`}
                   alt="Кофе La Cafe"
                   onLoad={() => setLoaded(true)}
-                  onError={() => setOk(false)}
+                  onError={() => {
+                    if (format === 'png') {
+                      setFormat('jpg')
+                    } else {
+                      setOk(false)
+                    }
+                  }}
                   className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-700 ${
                     loaded ? 'opacity-100' : 'opacity-0'
                   }`}

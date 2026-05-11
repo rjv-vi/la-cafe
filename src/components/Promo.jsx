@@ -5,6 +5,7 @@ import Reveal from './Reveal.jsx'
 export default function Promo() {
   const [ok, setOk] = useState(true)
   const [loaded, setLoaded] = useState(false)
+  const [format, setFormat] = useState('png')
 
   return (
     <section className="bg-white pb-20 sm:pb-24">
@@ -83,10 +84,16 @@ export default function Promo() {
               </div>
               {ok && (
                 <img
-                  src="/images/promo.jpg"
+                  src={`/images/promo.${format}`}
                   alt="Тирамису от La Crème"
                   onLoad={() => setLoaded(true)}
-                  onError={() => setOk(false)}
+                  onError={() => {
+                    if (format === 'png') {
+                      setFormat('jpg')
+                    } else {
+                      setOk(false)
+                    }
+                  }}
                   className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-700 ${
                     loaded ? 'opacity-100' : 'opacity-0'
                   }`}
